@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+
+.textcentrado {
+    color: blue; 
+    text-align: center;
+}
+
+
+  /* MENUS */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffe600;
+} 
+
+
+li {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111111;
+}
+
+
+@media screen and (max-width: 992px) {
+    body {
+        background-color: white;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: olive;
+    }
+}
