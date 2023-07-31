@@ -3,7 +3,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Elaborado por: Juan Diego Domínguez Castaño ------ Meliza Brigitte Lopez Peralta -------- Oscar Daniel Zarco González &copy;</span>
                     </div>
                 </div>
             </footer>
@@ -57,6 +57,16 @@
     <script src="./styles/js/demo/chart-area-demo.js"></script>
     <script src="./styles/js/demo/chart-pie-demo.js"></script>
 
+    <div>
+        <style>
+            .sticky-footer{
+                padding: 20px;
+                width: 100%;
+                position: fixed;
+                bottom: 0; 
+            }
+        </style>
+    </div>
 </body>
 
 </html>

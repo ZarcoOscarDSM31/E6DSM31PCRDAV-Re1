@@ -1,6 +1,7 @@
 <?php
 include ("./../../layout/menu.php");
 include ("./../../layout/header.php");
+/* include ("./../../test.php"); */
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -8,8 +9,8 @@ include ("./../../layout/header.php");
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Productos</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Agregar Producto</a>
+        <a href="<?=$h->get['base_url'].'/views/products/add.php'?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-plus fa-sm text-white-50"></i> Agregar Producto</a>
     </div>
 
      
@@ -24,7 +25,7 @@ include ("./../../layout/header.php");
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Mis Pordocutos</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -37,6 +38,7 @@ include ("./../../layout/header.php");
                         <th>Age</th>
                         <th>Start date</th>
                         <th>Salary</th>
+                        <th>operaciones</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -47,6 +49,8 @@ include ("./../../layout/header.php");
                         <th>Age</th>
                         <th>Start date</th>
                         <th>Salary</th>
+                        <th>operaciones</th>
+
                     </tr>
                 </tfoot>
                 <tbody>
@@ -57,6 +61,28 @@ include ("./../../layout/header.php");
                         <td>61</td>
                         <td>2011/04/25</td>
                         <td>$320,800</td>
+                        <td>
+                            <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-4 mx-4">
+                                    <a href="<?=$h->get['base_url'].'/views/products/edit.php'?>"><button class="btn btn-primary" type="button">
+                                    <i class="fas fa-pencil fa-sm text-white-50"></i>
+                                    </button></a>
+                                </div>
+                                <div class="col-4 mx-4">
+                                    <button class="btn btn-warning" type="button">
+                                    <i class="fas fa-eye fa-sm text-white-50"></i>
+                                    </button>
+                                </div>
+                                <div class="col-4 mx-4">
+                                    <button class="btn btn-danger" type="button">
+                                    <i class="fas fa-trash fa-sm text-white-50"></i>
+
+                                    </button>
+                                </div>
+                            </div>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>Garrett Winters</td>

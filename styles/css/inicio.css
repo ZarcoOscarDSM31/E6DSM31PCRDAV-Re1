@@ -1,0 +1,62 @@
+
+body{
+    background-color: #4e73df;
+
+}
+.input {
+    position: relative;
+}
+
+.input__field {
+padding: 10px;
+width: 270px;
+border: none;
+border-radius: 4px;
+font: inherit;
+color: #4e73df;
+background-color: transparent;
+outline: 2px solid #fff;
+}
+
+.input__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    transition: transform 0.25s;
+}
+
+.input__field:focus-visible ~ .input__label, 
+.input__field:valid ~ .input__label {
+    transform: translate(0, -30px) scale(1);
+    color: #4e73df;
+}
+
+.input__field:is(:focus-visible, :valid) {
+    outline-color: #4e73df;
+}
+
+.input__icon-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.swal {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    background-color: #fff;
+}
+
+.swal:hover{
+    background:#4e73df;
+}

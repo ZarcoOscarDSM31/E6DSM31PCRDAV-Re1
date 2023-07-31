@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>DESCRIPCION</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            width: 50%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Estilo para filas de la primera celda (amarillo) */
+        tr:nth-child(odd) td:first-child {
+            background-color: #FFC107; /* Amarillo */
+        }
+
+        /* Estilo para filas de la segunda celda (morado) */
+        tr:nth-child(odd) td:last-child {
+            background-color: #6A1B9A; /* Morado */
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>EVIDENCIA CON IMAGENES  </th>
+            <th>REPORTE DE DAÑOS</th>
+        </tr>
+        <tr >
+            
+            <td style="background-color: #FFC107; color: #8D6E63;">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name=" subir imagen">
+                   
+              
+            </td>
+            <td style="background-color: #6A1B9A; color: white;">
+                <h5>Descripcion 1</h5>
+                <textarea name="descripcion_fila1" rows="4" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td> <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name=" subir imagen"></td>
+            <td>
+                <h5>cescripcion 2</h5>
+                <textarea name="descripcion_fila1" rows="4" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #FFC107; color: #8D6E63;"> <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name=" subir imagen"></td>
+            <td style="background-color: #6A1B9A; color: white;">
+                <h4>Escripcion 3</h4>
+                <textarea name="descripcion_fila1" rows="4" cols="30"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td> <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name=" subir imagen"></td>
+            <td>
+                <h1>Descripcion 4</h1>
+                <textarea name="descripcion_fila1" rows="4" cols="30"></textarea>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="guardarDatos()">Guardar</button>
+
+    <!-- Aquí puedes agregar tu script si deseas realizar alguna acción al hacer clic en el botón "Guardar" -->
+    <script>
+        function guardarDatos() {
+            // Aquí puedes realizar alguna acción para guardar los datos ingresados en la descripción
+            // por ejemplo, enviar los datos a un servidor o almacenarlos en una base de datos.
+            alert('Datos guardados correctamente.');
+        }
+    </script>
+</body>
+
+</html>
