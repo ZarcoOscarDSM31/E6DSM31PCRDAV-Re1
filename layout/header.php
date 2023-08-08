@@ -1,24 +1,6 @@
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-    <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
-
-    <!-- Topbar Search -->
-    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-        <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar reportes"
-                aria-label="Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                </button>
-            </div>
-        </div>
-    </form>
-
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
 
@@ -32,38 +14,170 @@
 
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <!-- RECORDEMOS QUE AQUI VA UNA IMAGEN DE REFERENCIA DEL PERFIL, NO CARGA POR QUE NO ESTA ANEXADA -->
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Perfil</span>
-                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
-            </a>
-            <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="perfil.php">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Perfil
-                </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Ajustes
-                </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Actividad
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Cerrar Sesión
-                </a>
+                <div>
+                    <div class="dropdown1">
+                        <div class="content1">
+                            <p>Perfil</p> 
+                    </div> 
+                    
+                    <button type="button"></button>
+                        <div class="menu1">
+                        <div class="dropdown-divider"></div>
+                            <a  href="perfil.php">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <p>Perfil</p>
+                            </a>
+                            <a>
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <p>Ajustes</p>
+                            </a>
+                            <a>
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <p>Actividad</p>
+                            </a>
+                    <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <p>Cerrar Sesión</p>
+                            </a>
+                        </div>
+            <div>
+            <style>
+                
+                .dropdown1 {
+                    translate: 1 5px;
+                    position: relative;
+                    cursor: pointer;
+                    float:none;
+                    z-index: 1;
+                }
+    
+                .dropdown1 > button {
+                    width: 150px;
+                    height: 50px;
+                    border: 0;
+                    float:none;
+                    border-radius: 6px;
+                    font-family: inherit;
+                    font-size: 18px;
+                    background: #4e73df;
+                }
+    
+                .dropdown1 > .content1 {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 45px;
+                    width: 95%;
+                    height: 70px;
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    float:none;
+                    justify-content: space-between;
+                    gap: 10px;
+                    color: #fff;
+                }
+    
+                .dropdown1 > .content1::after {
+                    
+                    bottom: 10px;
+                    right: 10%;
+                    width: 100%;
+                    height: 1px;
+                    transform: scaleX(0);
+                    background: rgb(255 255 255 / 30%);
+                    transition: 0.3s;
+                    float:none;
+                }
+    
+                .dropdown1:hover > .content1::after {
+                    transform: scaleX(1);
+                }
+    
+                .dropdown1 > .content1 > span:first-child {
+                    font-size: 20px;
+                }
+    
+                .dropdown1 > .content1 > span:last-child {
+                    margin-left: auto;
+                }
+    
+                .dropdown1 > .content1 > span:last-child {
+                    transition: 0.3s;
+                }
+    
+                .dropdown1:hover > .content1 > span:last-child {
+                    rotate: -180deg;
+                }
+    
+                .dropdown1 > .menu1 {
+                    position: absolute;
+                    z-index: 1;
+                    top: -6px;
+                    left: 50%;
+                    display: grid;
+                    width: 105.5%;
+                    padding: 70px 0 6px;
+                    border-radius: 6px;
+                    translate: -50% 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    scale: 0.85;
+                    background: linear-gradient(#4e73df, #a890fe);
+                    transition: 0.3s;
+                    float:none;
+                }
+    
+                .dropdown1:hover > .menu1 {
+                    visibility: visible;
+                    opacity: 1;
+                    scale: 1;
+                }
+    
+                .dropdown1 > .menu1 > a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 0 24px;
+                    float:none;
+                }
+    
+                .dropdown1 > .menu1 > a:hover {
+                    background: rgb(255 255 255 / 20%);
+                    color: #000;
+                    float:none;
+                }
+    
+                .dropdown1 > .menu1 > a > span {
+                    font-size: 20px;
+                }
+            </style>
             </div>
         </li>
 
     </ul>
 
 </nav>
-<!-- End of Topbar -->
-<?php
-//include "container.php";
-?>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Quieres salir?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">Selecciona "salir" para cerrar sesión.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>

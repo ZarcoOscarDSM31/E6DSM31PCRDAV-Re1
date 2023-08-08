@@ -9,10 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>FixcarDigital</title>
-    <link rel="icon" href="imagenes1/icono.jpg">
+    <link rel="icon" href="../styles/img/imagenes1/usuario.png">
     
-<!-- FONT AWESOME ICONS -->
-<script src="https://kit.fontawesome.com/07b3caf175.js" crossorigin="anonymous"></script>
+
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -20,7 +19,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="http://localhost/E6DSM31PCRDAV-Re1%20-%20copia//styles/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="http://localhost/E6DSM31PCRDAV-Re1//styles/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +34,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
@@ -50,38 +49,37 @@
             <div class="sidebar-heading">
                 Crudes
             </div>
-            <!-- Nav Item - Dashboard -->
+
+            <!-- Nav Item - Inicio -->
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/E6DSM31PCRDAV-Re1%20-%20copia/#">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Ingreso</span></a>
+                    <span>Inicio</span></a>
             </li>
-
-        <?php
-        include ("./../../test.php");
-
-        ?>
-            <!-- Nav Item - Productos -->
+            <!-- Nav Item - Datos -->
             <li class="nav-item">
-            <a class="nav-link" href="<?=$h->get['base_url'].'/views/products/index.php'?>">Products BUR
-<!--                 <a class="nav-link" href="./views/products/index.php">
- -->                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Productos</span></a>
+                <a class="nav-link" href="datos.php">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Datos</span></a>
             </li>
-
+            </li>
+            <!-- Nav Item - Daños -->
+            <li class="nav-item">
+                <a class="nav-link" href="daños.php">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Daños</span></a>
+            </li>
             <!-- Nav Item - Descripción -->
             <li class="nav-item">
-            <a class="nav-link" href="<?=$h->get['base_url'].'/views/clients/index.php'?>">Clientes BUR
+                <a class="nav-link" href="descripcion.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Clientes</span></a>
+                    <span>Descripción</span></a>
             </li>
             <!-- Nav Item - Costos -->
             <li class="nav-item">
                 <a class="nav-link" href="costos.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Costos</span></a>
-            </li>
-            <!--Reportes-->
+                    <span>Autos</span></a>
             </li>
             <!-- Nav Item - Reportes -->
             <li class="nav-item">
@@ -89,12 +87,11 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Reportes</span></a>
             </li>
-            <!--PERFIL
             <li class="nav-item">
-                <a class="nav-link" href="perfil.php">
+                <a class="nav-link" href="tables.php">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>perfil</span></a>
-            </li>-->
+                    <span>Panel</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

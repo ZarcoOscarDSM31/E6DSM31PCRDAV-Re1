@@ -1,44 +1,21 @@
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Elaborado por: Juan Diego Domínguez Castaño ------ Meliza Brigitte Lopez Peralta -------- Oscar Daniel Zarco González &copy;</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
+<footer class="sticky-footer bg-white ">
+    <div class="pull-right hidden-xs">
+    <div class="container my-auto">
+    <div class="copyright text-center my-auto" id="copyright">
+                        &copy; <script>
+                            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                    </script>, Hecho por:  <a target="_blank"> ---Meliza Brigitte Lopez Peralta---Juan Diego Dominguez Castaño---Oscar Daniel Zarco González---</a></a>
     </div>
-    <!-- End of Page Wrapper -->
+    </div>
+    <div class="control-sidebar-bg"></div>
+    </div>
+</footer>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="././vendor/jquery/jquery.min.js"></script>
@@ -57,16 +34,38 @@
     <script src="./styles/js/demo/chart-area-demo.js"></script>
     <script src="./styles/js/demo/chart-pie-demo.js"></script>
 
+    <!-- jQuery 3 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="js/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="js/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="js/adminlte.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="js/sweetalert2.min.js"></script>
+
+    <script src="js/admin-ajax.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="js/demo.js"></script>
+
+    <script src="js/login-ajax.js"></script>
+
+    <script src="js/app.js"></script>
+
     <div>
         <style>
             .sticky-footer{
                 padding: 20px;
                 width: 100%;
-                position: fixed;
+                position:-webkit-sticky;
                 bottom: 0; 
+                display:block;
             }
         </style>
     </div>
-</body>
-
-</html>

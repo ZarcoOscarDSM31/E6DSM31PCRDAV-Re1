@@ -1,6 +1,7 @@
 <?php
 include ("./../../layout/menu.php");
 include ("./../../layout/header.php");
+
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -8,7 +9,7 @@ include ("./../../layout/header.php");
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Productos</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        <a href="add.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Agregar Producto</a>
     </div>
 
@@ -48,15 +49,36 @@ include ("./../../layout/header.php");
                     </tr>
                 </tfoot>
                 <tbody>
+                    <?php
+                    //conecionpro
+                    include('./../../databases/conexionpro.php');
+                    $sql = $conn->query("select * from autos ");
+                        while($resultado = $sql->fetch_assoc()){
+
+                        
+                    ?>
                     <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
+                        <td><?php echo $resultado['id']?></td>
+                        <td><?php echo $resultado['placa']?></td>
+                        <td><?php echo $resultado['kilometraje']?></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-success">ver</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-warning">Editar</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-danger">eliminar</button>
+                                </div>
+                            </div>
+                        </td>
+                        
                     </tr>
-                 
+                 <?php
+                        }
+                 ?>
                 </tbody>
             </table>
         </div>

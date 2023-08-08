@@ -6,12 +6,22 @@ include "layout/header.php";
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">REPORTE DE AVERIAS Y DAÑOS EN VEHICULOS AUTOMOTRICES</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i>+</a>
+    <div class="h3 text-gray>
+        <h1 class="h3 mb-0 text-gray-800">AVERIAS Y DAÑOS EN VEHICULOS AUTOMOTRICES</h1>
     </div>
 
+    <div>
+        <style>
+            .h3 {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: translate(0%, -7%);
+            }
+        </style>
+    </div>
     <!-- Content Row -->
     <div class="row">
 
@@ -99,74 +109,82 @@ include "layout/header.php";
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div>
+        <div id="carousel">
+            <figure id="spinner">
+                <img src="./styles/img/imagenes1/meca1.jpg" alt>
+                <img src="./styles/img/imagenes1/meca2.jpg" alt>
+                <img src="./styles/img/imagenes1/meca3.jpg" alt>
+                <img src="./styles/img/imagenes1/meca4.jpg" alt>
+                <img src="./styles/img/imagenes1/meca5.jpg" alt>
+                <img src="./styles/img/imagenes1/meca6.jpg" alt>
+                <img src="./styles/img/imagenes1/meca7.jpg" alt>
+                <img src="./styles/img/imagenes1/meca8.jpg" alt>
 
-    <!-- Content Row -->
-
-    <div class="row">
-
-        <!-- Area Chart -->
-        <div class="col-xl-12 col-lg-7">
-            <div class="card shadow mb-4">
-        
-            <!-- AGREGAREMOS LOS CONTAINERS MEDIANTE LINKS ES DECIR DANDOLES FUNCIONALIDAD -->
-            <table border="1">
-        <tr id="ancho">
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Contraseña</th>
-            <th>Operaciones</th>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td> <input type="gmail" name="" id=""></td>
-            <td><input type="password"></td>
-            <td class="Operaciones_bot">
-                <button class="bott">Visualizar</button>
-                <button class="bott">Editar</button>
-                <button class="bott">Eliminar</button>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td> <input type="gmail" name="" id=""></td>
-            <td><input type="password"></td>
-            <td class="Operaciones_bot">
-                <button class="bott">Visualizar</button>
-                <button class="bott">Editar</button>
-                <button class="bott">Eliminar</button>
-            </td>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td> <input type="gmail" name="" id=""></td>
-            <td><input type="password"></td>
-            <td class="Operaciones_bot">
-                <button class="bott">Visualizar</button>
-                <button class="bott">Editar</button>
-                <button class="bott">Eliminar</button>
-            </td>
-        </tr>
-    </table>
-    <style>
-        .ancho {
-            width: 500px;
-            padding: 10px;
-        }
-
-        .Operaciones_bot {
-            font-size: 10px;
-        }
-
-        .bott {
-            color: black;
-            border: .5;
-            
-        }
-    </Style>
-            </div>
+            </figure>
         </div>
-    </div>
-    </div>
+            <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+            <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+        <div>
+            <style>
+                div#carousel { 
+                    perspective: 1200px; 
+                    background: linear-gradient(#4e73df, #a890fe);
+                    padding-top: 10%; 
+                    font-size:0; 
+                    margin-bottom: 2rem; 
+                    overflow: hidden; 
+                    width: 1100px;
+                    border-radius: 40px;
+                    transform: translate(1%, 5%);
+                }
+                figure#spinner { 
+                    transform-style: preserve-3d; 
+                    height: 300px; 
+                    transform-origin: 50% 50% -500px; 
+                    transition: 0.5s; 
+                } 
+                figure#spinner img { 
+                    width: 40%; max-width: 425px; 
+                    position: absolute; left: 30%;
+                    transform-origin: 50% 50% -500px;
+                    outline:1px solid transparent; 
+                }
+                figure#spinner img:nth-child(1) { transform:rotateY(0deg); }
+                figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+                figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+                figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+                figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+                figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+                figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+                figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+                div#carousel ~ span { 
+                    color: #fff; 
+                    margin: 5%; 
+                    display: inline-block; 
+                    text-decoration:none; 
+                    font-size: 4rem; 
+                    transition: 0.5s color; 
+                    position: relative; 
+                    margin-top: -15rem; 
+                    border-bottom: none;
+                    line-height: 0; }
+                div#carousel ~ span:hover { color: #000; cursor: pointer; }
+            </style>
+        </div>
+        <div>
+            <script>
+                var angle = 0;
+                function galleryspin(sign) { 
+                spinner = document.querySelector("#spinner");
+                if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+                spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+                }
+            </script>
+        </div>
+</div>
 
     <div>
 <!-- End of Main Content -->
